@@ -52,8 +52,12 @@ jobs:
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
         run: |
-          echo "Authenticated npm user (should be the @0xkoller scope owner):"
-          npm whoami || echo "!! whoami failed — token is invalid, read-only, or not authenticated"
+          echo "=== whoami ==="
+          npm whoami || echo "!! whoami failed"
+          echo "=== profile (email + verification + 2fa) ==="
+          npm profile get || echo "!! profile get failed (token may lack profile read)"
+          echo "=== access: packages this token can write ==="
+          npm access list packages || echo "!! access list failed"
 
       - name: Build packages
         if: github.event_name == 'push'
