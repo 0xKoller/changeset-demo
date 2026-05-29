@@ -20,7 +20,7 @@ It mirrors the real setup 1:1 (only names/paths are swapped): a **fixed core gro
 | `@xmcp-dev/*` plugins | `@demokit-dev/plugin`                | ignored (manual publish flow) |
 
 - **Fixed group** (`.changeset/config.json` → `fixed`): the three `@0xkoller/*` core packages always bump to the **same** version together.
-- **Ignored** (`.changeset/config.json` → `ignore`): `@demokit-dev/plugin` is excluded from the Changesets flow entirely.
+- **Ignored** (`.changeset/config.json` → `ignore`): `@demokit-dev/plugin` is excluded from Changesets *versioning*. It is also marked `"private": true` so `changeset publish` skips it — modeling a plugin on its own separate/manual publish flow. (Note: the `ignore` list only affects versioning; `private: true` is what keeps the shared publish from touching it.)
 
 ## Key files (faithful copies of xmcp's)
 

@@ -3,6 +3,7 @@
   "version": "0.0.3",
   "description": "Example plugin (mirrors @xmcp-dev/*) — IGNORED by Changesets, manual publish flow.",
   "license": "MIT",
+  "private": true,
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "files": [
