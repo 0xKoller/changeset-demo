@@ -48,6 +48,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Verify npm auth (diagnostic)
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+        run: |
+          echo "Authenticated npm user (should be the @0xkoller scope owner):"
+          npm whoami || echo "!! whoami failed — token is invalid, read-only, or not authenticated"
+
       - name: Build packages
         if: github.event_name == 'push'
         run: pnpm turbo build --filter=@0xkoller/demokit --filter=@0xkoller/create-demokit-app --filter=@0xkoller/init-demokit
