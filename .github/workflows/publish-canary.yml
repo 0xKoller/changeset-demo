@@ -120,7 +120,7 @@ jobs:
         run: pnpm install --no-frozen-lockfile
 
       - name: Build packages
-        run: pnpm turbo build --filter=demokit --filter=create-demokit-app --filter=init-demokit
+        run: pnpm turbo build --filter=@0xkoller/demokit --filter=@0xkoller/create-demokit-app --filter=@0xkoller/init-demokit
 
       - name: Verify build outputs
         run: |

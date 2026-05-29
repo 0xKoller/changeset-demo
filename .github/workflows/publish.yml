@@ -48,6 +48,10 @@ jobs:
       - name: Install dependencies
         run: pnpm install --frozen-lockfile
 
+      - name: Build packages
+        if: github.event_name == 'push'
+        run: pnpm turbo build --filter=@0xkoller/demokit --filter=@0xkoller/create-demokit-app --filter=@0xkoller/init-demokit
+
       - name: Dry run Changesets version
         if: github.event_name == 'workflow_dispatch'
         run: |
