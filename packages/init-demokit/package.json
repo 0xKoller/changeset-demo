@@ -1,6 +1,6 @@
 {
   "name": "@0xkoller/init-demokit",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Init CLI (mirrors init-xmcp) — versioned via Changesets in lock-step.",
   "license": "MIT",
   "publishConfig": {

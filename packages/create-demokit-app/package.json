@@ -1,6 +1,6 @@
 {
   "name": "@0xkoller/create-demokit-app",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Scaffolding CLI (mirrors create-xmcp-app) — versioned via Changesets in lock-step.",
   "license": "MIT",
   "publishConfig": {
