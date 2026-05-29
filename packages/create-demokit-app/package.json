@@ -1,0 +1,22 @@
+{
+  "name": "@0xkoller/create-demokit-app",
+  "version": "0.1.0",
+  "description": "Scaffolding CLI (mirrors create-xmcp-app) — versioned via Changesets in lock-step.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "create-demokit-app": "index.js"
+  },
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --out-dir . --clean=false"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}

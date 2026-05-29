@@ -1,0 +1,22 @@
+{
+  "name": "@0xkoller/init-demokit",
+  "version": "0.1.0",
+  "description": "Init CLI (mirrors init-xmcp) — versioned via Changesets in lock-step.",
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public"
+  },
+  "bin": {
+    "init-demokit": "dist/index.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+  "changelog": [
+    "@changesets/cli/changelog",
+    {
+      "repo": "basementstudio/changeset-demo"
+    }
+  ],
+  "commit": false,
+  "fixed": [
+    [
+      "@0xkoller/demokit",
+      "@0xkoller/create-demokit-app",
+      "@0xkoller/init-demokit"
+    ]
+  ],
+  "linked": [],
+  "access": "public",
+  "baseBranch": "main",
+  "updateInternalDependencies": "patch",
+  "ignore": ["@demokit-dev/plugin"],
+  "privatePackages": {
+    "version": false,
+    "tag": false
+  }
+}

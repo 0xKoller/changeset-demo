@@ -1,0 +1,7 @@
+node_modules
+dist
+.turbo
+*.log
+
+# build output that lands at package root
+packages/create-demokit-app/index.js

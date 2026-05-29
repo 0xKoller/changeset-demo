@@ -1,0 +1,18 @@
+{
+  "name": "@demokit-dev/plugin",
+  "version": "0.0.3",
+  "description": "Example plugin (mirrors @xmcp-dev/*) — IGNORED by Changesets, manual publish flow.",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs --dts"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.0",
+    "typescript": "^5.4.0"
+  }
+}
